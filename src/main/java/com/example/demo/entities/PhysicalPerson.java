@@ -15,19 +15,13 @@ import lombok.Setter;
 @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter
 @Entity
-public class Account implements Serializable {
-	
-	private static final long serialVersionUID = 7571197499614028847L;
+public class PhysicalPerson implements Serializable {
+
+	private static final long serialVersionUID = 9060480952943545192L;
 	
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	
 	private Long id;
-	private String number;
-	
-	private Date createdOn;
-	private Date modifiedOn;
-	
-	public Account(String number) {
-		this.number = number;
-	}
+	private String firstName;
+	private String lastName;
+	private Date birthDate;
 }
